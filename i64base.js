@@ -37,7 +37,7 @@ i64Base.prototype._intTo64Fast = function(number) {
     var rixit                          // like 'digit', only in some non-decimal radix 
       , result   = ''
       , residual = Math.floor(number)
-      , alphabet = this._config.alphabet
+      , alphabet = default_alphabet
     ;
     while (true) {
         rixit    = residual % 64;
@@ -54,11 +54,11 @@ i64Base.prototype._intTo64Fast = function(number) {
 
 // based on: http://stackoverflow.com/questions/6213227/fastest-way-to-convert-a-number-to-radix-64-in-javascript
 i64Base.prototype._toIntFast = function(i64string) {
-	if (!this.isi64Base(i64string)) {
+	if (!this.isI64(i64string)) {
 		throw new i64BaseError("Invalid _toIntFast() Int64String: '" + i64string + "'");
 	}
     var result = 0
-      , alphabet = this._config.alphabet
+      , alphabet = default_alphabet
     ;
     i64string = i64string.split('');
     for (var e in i64string) {
@@ -81,7 +81,7 @@ i64Base.prototype.new = function() {
 
 
 
-i64Base.prototype.isi64Base = function(i64string) {
+i64Base.prototype.isI64 = function(i64string) {
 	var result = (typeof i64string == 'string') && (i64string == i64string.match(/^([\-_A-Za-z0-9+/])*/g));
 	return result;
 }
@@ -92,7 +92,7 @@ i64Base.prototype.valueOf = function(i64string) {
 	if (typeof i64string == 'undefined') { // no parameter, return the Int64String value
 		return this._value;
 	} else {
-		if (!this.isi64Base(i64string)) {
+		if (!this.isI64(i64string)) {
 			throw new I64StringError("Invalid valueOf() Int64String '" + i64string + "'");
 		}
 		this._value = i64string;
@@ -118,18 +118,6 @@ i64Base.prototype.int = function(intvalue) {
 		return this;
 	}
 }
-
-
-
-i64Base.prototype.hex = function(hexvalue) {
-	if (typeof hexvalue == 'undefined') { // no parameter, return the hexidecimal value
-		return int_encoder.decode(this._value, 16);
-	} else { // assign the hexidecimal value
-		this._value = int_encoder.encode(hexvalue, 16);
-		return this; 
-	}
-}
-
 
 
 

@@ -13,7 +13,6 @@ npm install i64
 
 ```
 var i64 = require('i64Base');   // initial instance
-i64.hex([hex_string])           // get/set value as Hexidecimal
 i64.int([integer])              // get/set value as Integer
 i64.valueOf([int64_string])     // value as BIS, set option
 i64.new(config)                 // new instance factory
@@ -22,11 +21,8 @@ i64.new(config)                 // new instance factory
 ## Examples
 
 ```
-i64.nt(64).valueOf()                 // _         integer to BIS
-
-i64.valueOf('a').asInt()             // 10        BIS to integer 
-
-i64.hex('ff').asInt()                // 255       hexidecimal to integer
+i64.int(64).valueOf()     // _         integer to BIS
+i64.valueOf('c').asInt()  // 12        BIS to integer 
 
 ```
 

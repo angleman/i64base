@@ -27,18 +27,4 @@ describe('int()', function() {
             result.should.equal(92858);
         });
     });
-
-    describe('large integer', function() {
-        var result;
-        it('returns "5abxVtZRda"', function() {
-            result = a64.int('92937450274902858');
-            should.exist(result);
-            result.should.equal('5abxVtZRda');
-        });
-        it('returns "92937450274902858"', function() {
-            result = a64.int();
-            should.exist(result);
-            result.should.equal('92937450274902858');
-        });
-    });
 });
