@@ -1,0 +1,40 @@
+{
+  "name": "i64base",
+  "version": "0.1.0", 
+  "description": "URL, Filename, AWS safe Base64 Integer Strings (BAS). Base class without dependencies.",
+  "main": "i64base.js",
+  "scripts": {
+    "test": "mocha -R list test/*.js",
+    "TESTS.md": "mocha -R markdown test/*.js > TESTS.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angleman/i64base.git"
+  },
+  "keywords": [
+    "url",
+    "base64",
+    "hex",
+    "hexidecimal",
+    "integer",
+    "compression",
+    "conversion"
+  ],
+  "author": "angleman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angleman/i64base/issues"
+  },
+  "engines" : { 
+    "node" : ">=0.8.0" 
+  },
+  "dependencies": {
+    },
+  "devDependencies": {
+     "license-md": "~0.2.1",
+     "grunt": "0.4.x",
+     "grunt-bump": "0.0.x",
+     "mocha": "~1.12.0",
+     "should": "~1.2.2"
+   }
+}
