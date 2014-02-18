@@ -1,6 +1,6 @@
 {
   "name": "i64base",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "URL, Filename, AWS safe Base64 Integer Strings (BAS) without dependencies.",
   "main": "i64base.js",
   "scripts": {
