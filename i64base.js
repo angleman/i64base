@@ -104,14 +104,10 @@ i64Base.prototype.valueOf = function(i64string) {
 
 i64Base.prototype.int = function(intvalue) {
 	if (typeof intvalue == 'undefined') { // no parameter, return the integer value
-		if (this._value.length > 4) { // large number
-			return int_encoder.decode(this._value, 10);
-		} else {
-			return this._toIntFast(this._value);
-		}
+		return this._toIntFast(this._value);
 	} else { // assign the integer value
 		if (typeof intvalue == 'string') {
-			this._value = int_encoder.encode(intvalue, 10);
+			this._value = this._intTo64Fast(parseInt(intvalue));
 		} else {
 			this._value = this._intTo64Fast(intvalue);
 		}

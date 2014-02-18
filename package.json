@@ -1,6 +1,6 @@
 {
   "name": "i64base",
-  "version": "0.1.5", 
+  "version": "0.1.5",
   "description": "URL, Filename, AWS safe Base64 Integer Strings (BAS) without dependencies.",
   "main": "i64base.js",
   "scripts": {
@@ -13,8 +13,8 @@
   },
   "keywords": [
     "url",
-	"aws",
-	"filename",
+    "aws",
+    "filename",
     "base64",
     "integer",
     "compression",
@@ -25,16 +25,15 @@
   "bugs": {
     "url": "https://github.com/angleman/i64base/issues"
   },
-  "engines" : { 
-    "node" : ">=0.8.0" 
+  "engines": {
+    "node": ">=0.8.0"
   },
-  "dependencies": {
-    },
+  "dependencies": {},
   "devDependencies": {
-     "license-md": "~0.2.1",
-     "grunt": "0.4.x",
-     "grunt-bump": "0.0.x",
-     "mocha": "~1.12.0",
-     "should": "~1.2.2"
-   }
+    "license-md": "~0.2.1",
+    "grunt": "0.4.x",
+    "grunt-bump": "0.0.x",
+    "mocha": "~1.12.0",
+    "should": "~1.2.2"
+  }
 }
