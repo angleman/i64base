@@ -1,7 +1,7 @@
 {
   "name": "i64base",
   "version": "0.1.2", 
-  "description": "URL, Filename, AWS safe Base64 Integer Strings (BAS). Base class without dependencies.",
+  "description": "URL, Filename, AWS safe Base64 Integer Strings (BAS) without dependencies.",
   "main": "i64base.js",
   "scripts": {
     "test": "mocha -R list test/*.js",
@@ -13,9 +13,9 @@
   },
   "keywords": [
     "url",
+	"aws",
+	"filename",
     "base64",
-    "hex",
-    "hexidecimal",
     "integer",
     "compression",
     "conversion"
